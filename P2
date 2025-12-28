@@ -1,0 +1,76 @@
+
+sprites = ''' 
+"Sprinkle Sprites: A Magical Adventure in the Woods" follows the enchanting journey of a group of tiny forest sprites named Sprinkle Sprites. These delightful creatures live deep within the heart of the forest, where they spend their days playing amongst the flowers and trees.
+
+One day, a mischievous wind carries away their beloved magical wand, which is essential for maintaining the balance of nature in the woods. Without their wand, the forest begins to lose its vibrant colors, and the animals start to feel sad and restless.
+
+Determined to restore harmony to their home, the Sprinkle Sprites embark on a daring adventure through the vast and mysterious forest. Along the way, they encounter a variety of challenges and make new friends, including wise old owls, playful squirrels, and gentle deer.
+
+Through teamwork, courage, and a sprinkle of magic, the Sprinkle Sprites overcome obstacles and ultimately find their lost wand. With the wand back in their possession, they work together to bring life and color back to the forest, ensuring that peace and happiness reign once more.
+
+Filled with whimsy, friendship, and the wonders of nature, "Sprinkle Sprites: A Magical Adventure in the Woods" is a heartwarming tale that inspires children to appreciate the beauty of the world around them and the power of cooperation." 
+'''
+
+letter_count = {}
+for letter in sprites:
+    letter_count[letter] = letter_count.get(letter,0) + 1
+print(letter_count)
+
+import matplotlib.pyplot as plt
+
+x,y = zip(*letter_count.items())
+
+plt.bar(x,y)
+plt.show()
+
+
+letter_count_clean = {}
+for k,v in letter_count.items():
+    if k.isalpha():
+        letter_count_clean[k] = v
+print(letter_count_clean)
+        
+x,y = zip(*letter_count_clean.items())
+plt.bar(x,y)
+plt.show()
+
+
+
+l1 = [1,2,3,4]
+l2 = ['a','b','c','d']
+
+l = list(zip(l1,l2))
+
+i, j =zip(*l)
+
+new_words = sprites.split(" ")
+
+
+for i in range(len(new_words)):
+    new_words[i] = new_words[i].strip()
+    new_words[i] = new_words[i].strip('\n')
+    new_words[i] = new_words[i].strip('\n')
+    new_words[i] = new_words[i].strip('\n')
+    new_words[i] = new_words[i].strip('\n')
+    new_words[i] = new_words[i].strip(',')
+    new_words[i] = new_words[i].strip('\n')
+    new_words[i] = new_words[i].strip(':')
+    new_words[i] = new_words[i].strip()
+    new_words[i] = new_words[i].strip('.')
+    new_words[i] = new_words[i].strip(':')
+    new_words[i] = new_words[i].strip('"')
+new_words.remove("")
+new_words.remove("")
+print(new_words)
+
+
+letter_count = {}
+for word in new_words:
+    letter_count[word] = letter_count.get(word,0) + 1
+print(letter_count)
+
+import matplotlib.pyplot as plt
+x,y = zip(*letter_count.items())
+
+plt.bar(x,y)
+plt.show()
