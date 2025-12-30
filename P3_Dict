@@ -1,0 +1,11 @@
+n = 12
+a = 0
+b = 1
+
+d = {}
+d[1] = a
+d[2] = b
+for i in range(3,n+1):
+    d[i] = a + b
+    a,b = b,a+b
+print(d)
