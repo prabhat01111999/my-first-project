@@ -1,0 +1,28 @@
+f = open('kipling.txt','w')
+print(type(f))
+f.write('Hey i am just practing this files and functions on python\n')
+f.write('Good Greif it does feels good to do this and maybe thats why i do it')
+f.close()
+
+f = open('kipling.txt','r')
+print(f.read())
+f.close()
+
+
+f = open('kipling.txt','r')
+print(f.readline())
+f.close()
+
+
+f = open('kipling.txt','r')
+print(f.readlines())
+f.close()
+
+
+f = open('kipling.txt','a')
+f.write('\nHey just looking for appending texts')  
+f.close()
+
+with open('kipling.txt','r') as f:
+    for line in f.readlines():
+        print(line, end = "")
