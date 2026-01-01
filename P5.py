@@ -5,7 +5,7 @@ def fib(n):
         a , b = b , a+b
     return a
 
-t = fib(20)
+t = fib(2000)
 print(t)
 
 def calc_mean(first, *reminder):
@@ -22,5 +22,5 @@ def fib_2(n):
         return 1 
     return fib_2(n-1) + fib(n-2)
 
-x = fib_2(20)
+x = fib_2(2000)
 print(x)
